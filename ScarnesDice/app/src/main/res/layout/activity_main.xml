@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.scarnesdice.MainActivity">
+
+    <TextView
+        android:id="@+id/your_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/reset"
+        android:layout_alignStart="@+id/reset"
+        android:layout_below="@+id/guideline"
+        android:layout_marginTop="18dp"
+        android:text="  Your Score : "
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="19dp"
+        tools:layout_editor_absoluteY="16dp"
+        tools:text="Your Score :" />
+
+    <TextView
+        android:id="@+id/your_score_display"
+        android:layout_width="47dp"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="16dp"
+        android:text=""
+        android:layout_alignBaseline="@+id/your_score"
+        android:layout_alignBottom="@+id/your_score"
+        android:layout_toRightOf="@+id/your_score"
+        android:layout_toEndOf="@+id/your_score" />
+
+    <TextView
+        android:id="@+id/computer_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Computers Score :  "
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="162dp"
+        tools:layout_editor_absoluteY="16dp"
+        tools:text="Computers Score :"
+        android:layout_alignBaseline="@+id/your_score_display"
+        android:layout_alignBottom="@+id/your_score_display"
+        android:layout_toLeftOf="@+id/computer_score_display"
+        android:layout_toStartOf="@+id/computer_score_display" />
+
+    <TextView
+        android:id="@+id/computer_score_display"
+        android:layout_width="47dp"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="264dp"
+        tools:layout_editor_absoluteY="16dp"
+        android:text=""
+        android:layout_alignBaseline="@+id/computer_score"
+        android:layout_alignBottom="@+id/computer_score"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="14dp"
+        android:layout_marginEnd="14dp" />
+
+    <ImageView
+        android:id="@+id/diceimg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:srcCompat="@drawable/dice1"
+        tools:layout_editor_absoluteY="90dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
+        android:layout_below="@+id/computer_score_display"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        tools:ignore="ContentDescription" />
+
+    <Button
+        android:id="@+id/hold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/roll"
+        android:layout_alignBottom="@+id/roll"
+        android:layout_toEndOf="@+id/diceimg"
+        android:layout_toRightOf="@+id/diceimg"
+        android:text="HOLD"
+        android:visibility="visible"
+        app:layout_constraintLeft_toRightOf="@+id/roll"
+        app:layout_constraintRight_toLeftOf="@+id/reset"
+        tools:layout_editor_absoluteY="267dp"
+        tools:text="HOLD" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/roll"
+        android:layout_alignBottom="@+id/roll"
+        android:layout_toLeftOf="@+id/diceimg"
+        android:layout_toStartOf="@+id/diceimg"
+        android:contentDescription="restarts game"
+        android:text="RESET"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="255dp"
+        tools:layout_editor_absoluteY="265dp"
+        tools:text="RESET" />
+
+    <Button
+        android:id="@+id/roll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/diceimg"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="47dp"
+        android:text="ROLL"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="267dp"
+        tools:text="ROLL" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline"
+        app:layout_constraintGuide_begin="20dp"
+        android:orientation="vertical" />
+
+</RelativeLayout>
